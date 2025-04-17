@@ -27,7 +27,7 @@ def send_http_request(api_url, method, signature, request_body = nil)
               req.body = request_body
               req
             when 'GET'
-              req = Net::HTTP::Get.new(uri.path)
+              req = Net::HTTP::Get.new(uri.request_uri)
               req
             end
 
